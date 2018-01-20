@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: order_easy
+  username:
+  password:
+
+test:
+  <<: *default
+  database: order_easy_test
+  username:
+  password:
+
+production:
+  <<: *default
+  database: order_easy
+  username:
+  password:
